@@ -10,12 +10,12 @@
         <Setter Property="HorizontalAlignment"
                 Value="Left" />
         <Setter Property="Foreground"
-                Value="Black" />
+                Value="#d0c0ff" />
         <Setter Property="FontSize"
-                Value="18" />
+                Value="12" />
         
         <Setter Property="Margin"
-                Value="70,0,0,0" />
+                Value="55,0,0,0" />
 
     </Style>
 </ResourceDictionary>

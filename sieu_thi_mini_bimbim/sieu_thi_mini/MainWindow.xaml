@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Menu="clr-namespace:sieu_thi_mini.Utilities"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"       
+        
         xmlns:vm="clr-namespace:sieu_thi_mini.ViewModel"
         xmlns:local="clr-namespace:sieu_thi_mini"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -18,158 +20,110 @@
     <Window.DataContext>
         <vm:NavigationVM/>
     </Window.DataContext>
-    <Grid>
-           <!--window border-->
-        <Border Background="#f6f6f8"
-                CornerRadius="20"/>
+
+    <Border Background="#eff2f7" CornerRadius="30">
         <Grid>
+            <Grid>
             <!--Base grid-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="228"/>
-                <ColumnDefinition Width="822"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!--// Navigation Panel //-->
 
-            <Grid HorizontalAlignment="Left"
-                  Width="228">
 
-                <Border Background="#FF52DDE2"
-                        CornerRadius="20,0,0,20" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <StackPanel Height="400"
-                            Width="228">
-
-                    <!--// Home //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding HomeCommand}"
-                              IsChecked="true">
-                        <Grid>
-                            <fa:ImageAwesome Icon="Home"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black"></fa:ImageAwesome>
+                
 
 
+                <Border Grid.Row="1" Background="#623ed0" CornerRadius="0,50,0,30">
+                    <DockPanel>
+                        <Border Width="80" Height="80" Padding="3" Background="White" CornerRadius="100" 
+                            DockPanel.Dock="Top" HorizontalAlignment="Left" Margin=" 20 -30 0 0">
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="./Images/img_customer.png"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
 
-                            <TextBlock Text="TRANG CHỦ"
-                                       Style="{StaticResource Text_Style}" />
+                        <TextBlock Text="Quản Lý Siêu Thị" Foreground="White" FontSize="22" FontWeight="SemiBold"
+                               DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
 
-                        </Grid>
-                    </Menu:Btn>
-                    
+                        <TextBlock Text="Bim Bim Mart" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                               DockPanel.Dock="Top" TextAlignment="Center"/>
 
-                    <!--// Employee //-->
+                        <Separator Margin="25 15" DockPanel.Dock="Top" Height="0.8" Background="#7e5fdc"/>
 
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding EmployeeCommand}">
+                        
+                        <StackPanel DockPanel.Dock="Top" >
+                            <Button Style="{StaticResource menuButton}"
+                                    Command="{Binding HomeCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Trang chủ"/>
+                                </StackPanel>
+                            </Button>
 
-                        <Grid>
+                            <Button Style="{StaticResource menuButton}"
+                                    Command="{Binding EmployeeCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="AccountMultipleOutline" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Nhân viên"/>
+                                </StackPanel>
+                            </Button>
 
-                            <fa:ImageAwesome Icon="User"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black"></fa:ImageAwesome>
+                            <Button Style="{StaticResource menuButton}" 
+                                    Command="{Binding ProductsCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="Sack" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Sản phẩm"/>
+                                </StackPanel>
+                            </Button>
 
-                            <TextBlock Text="NHÂN VIÊN"
-                                       Style="{StaticResource Text_Style}" />
+                            <Button Style="{StaticResource menuButton}"
+                                    Command="{Binding OrdersCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="OrderBoolAscendingVariant" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Đơn hàng"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}"
+                                    Command="{Binding ImportProductCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="FileImport" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Nhập hàng"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}"
+                                    Command="{Binding StatisticalCommand}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="Excavator" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock Text="Thống kê"/>
+                                    </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource menuButton}"
+                                    Command="{Binding SettingCommand}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="SetCenterRight" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock Text="Cài đặt"/>
+                                    </StackPanel>
+                             </Button>
 
-                        </Grid>
-
-                    </Menu:Btn>
-
-                    <!--// Products //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding ProductsCommand}">
-
-                        <Grid>
-
-                            <fa:ImageAwesome Icon="NewspaperOutline"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black"></fa:ImageAwesome>
-
-                            <TextBlock Text="SẢN PHẨM"
-                                       Style="{StaticResource Text_Style}" />
-
-                        </Grid>
-
-                    </Menu:Btn>
-
-                    <!--// Orders //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding OrdersCommand}">
-
-                        <Grid>
-
-                            <fa:ImageAwesome Icon="CartPlus"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black"></fa:ImageAwesome>
-
-                            <TextBlock Text="ĐƠN HÀNG"
-                                       Style="{StaticResource Text_Style}" />
-
-                        </Grid>
-
-                    </Menu:Btn>
-
-                    <!--// Statistical //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding StatisticalCommand}">
-
-                        <Grid>
-
-                            <fa:ImageAwesome Icon="BarChartOutline"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black">
-                                
-                            </fa:ImageAwesome>
-
-                            <TextBlock Text="THỐNG KÊ"
-                                       Style="{StaticResource Text_Style}" />
-
-                        </Grid>
-
-                    </Menu:Btn>
-
-                    <!--// ImportProduct //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding ImportProductCommand}">
-
-                        <Grid>
-
-                            <fa:ImageAwesome Icon="Download"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black"></fa:ImageAwesome>
-
-                            <TextBlock Text="NHẬP HÀNG"
-                                       Style="{StaticResource Text_Style}" />
-
-                        </Grid>
-
-                    </Menu:Btn>
-
-                    <!--// Settings //-->
-
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                              Command="{Binding SettingCommand}">
-
-                        <Grid>
-
-                            <fa:ImageAwesome Icon="Gear"
-                                             Style="{StaticResource Image_Style}"
-                                             Foreground="Black"></fa:ImageAwesome>
-
-                            <TextBlock Text="CÀI ĐẶT"
-                                       Style="{StaticResource Text_Style}" />
-
-                        </Grid>
-
-                    </Menu:Btn>
-
-                </StackPanel>
-
+                        </StackPanel>
+                        <Button x:Name="btlogout" Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20" Click="btLogOut_Click">
+                            <StackPanel Orientation="Horizontal" >
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Logout"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                </Border>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -183,4 +137,5 @@
                 Style="{StaticResource ExitApp}"
                 Click="CloseApp_Click" />
     </Grid>
+    </Border>
 </Window>

@@ -28,5 +28,11 @@ namespace sieu_thi_mini
         {
             Close();
         }
+
+
+        private void btLogOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
