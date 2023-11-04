@@ -20,6 +20,7 @@ namespace sieu_thi_mini.View
     /// </summary>
     public partial class Setting : UserControl
     {
+        string ConnectionString = App.ConnectionString;
         public Setting()
         {
             InitializeComponent();

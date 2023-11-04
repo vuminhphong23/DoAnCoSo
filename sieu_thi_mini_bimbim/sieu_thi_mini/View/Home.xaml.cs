@@ -29,7 +29,7 @@ namespace sieu_thi_mini.View
         }
 
         SqlConnection Conn = new SqlConnection();
-        string ConnectionString = "";
+        
 
         public SeriesCollection LineChartSeriesCollection { get; set; }
         public SeriesCollection ColumnChartSeriesCollection { get; set; }
@@ -267,8 +267,7 @@ namespace sieu_thi_mini.View
         {
             try
             {
-                ConnectionString = @"Data Source=DESKTOP-QE0P914\SQLEXPRESS;Initial Catalog=QuanLySieuThi;Integrated Security=True;";
-                Conn.ConnectionString = ConnectionString;
+                Conn.ConnectionString = App.ConnectionString;
                 Conn.Open();
                 piechart();
                 linechart();

@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace sieu_thi_mini.View
+namespace sieu_thi_mini
 {
     /// <summary>
-    /// Interaction logic for Employees.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class Employees : UserControl
+    public partial class Login : Window
     {
-        string ConnectionString = App.ConnectionString;
-        public Employees()
+        public Login()
         {
             InitializeComponent();
         }

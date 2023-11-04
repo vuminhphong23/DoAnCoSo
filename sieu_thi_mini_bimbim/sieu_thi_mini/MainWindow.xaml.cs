@@ -20,19 +20,20 @@ namespace sieu_thi_mini
     /// </summary>
     public partial class MainWindow : Window
     {
+        string ConnectionString = App.ConnectionString;
         public MainWindow()
         {
             InitializeComponent();
         }
         private void CloseApp_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
 
 
         private void btLogOut_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

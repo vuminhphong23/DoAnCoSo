@@ -19,14 +19,15 @@ namespace sieu_thi_mini
     /// </summary>
     public partial class MainWindowEmployee : Window
     {
+        string ConnectionString = App.ConnectionString;
         public MainWindowEmployee()
         {
             InitializeComponent();
         }
 
-        private void CloseApp_Click(object sender, RoutedEventArgs e)
+        private void btLogOut_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

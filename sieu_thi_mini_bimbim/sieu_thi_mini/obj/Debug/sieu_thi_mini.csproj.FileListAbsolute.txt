@@ -65,3 +65,5 @@ E:\C#\sieu_thi_mini\sieu_thi_mini\bin\Debug\OxyPlot.Wpf.Shared.dll
 E:\C#\sieu_thi_mini\sieu_thi_mini\bin\Debug\OxyPlot.xml
 E:\C#\sieu_thi_mini\sieu_thi_mini\bin\Debug\OxyPlot.Wpf.Shared.xml
 E:\C#\sieu_thi_mini\sieu_thi_mini\bin\Debug\PresentationFramework.Aero2.dll
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\Login.g.cs
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\Login.baml

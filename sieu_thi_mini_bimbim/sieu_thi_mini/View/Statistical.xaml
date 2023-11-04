@@ -10,13 +10,13 @@
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="822"
+             d:DesignHeight="570" d:DesignWidth="870"
              
              Style="{StaticResource Page_Style}" Loaded="UserControl_Loaded">
 
 
     <Grid>
-        <materialDesign:Card Margin="0,62,0,0">
+        <materialDesign:Card Margin="0,0,0,0">
             <TabControl
                 materialDesign:ColorZoneAssist.Background="#f6f6f8"
                 materialDesign:ColorZoneAssist.Foreground="Black"

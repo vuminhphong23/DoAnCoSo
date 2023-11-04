@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:sieu_thi_mini.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="822"
+             d:DesignHeight="570" d:DesignWidth="870"
              Style="{StaticResource Page_Style}">
 
     <UserControl.DataContext>

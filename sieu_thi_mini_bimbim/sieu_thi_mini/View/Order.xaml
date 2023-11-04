@@ -9,7 +9,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="822"
+             d:DesignHeight="570" d:DesignWidth="870"
              Style="{StaticResource Page_Style}">
 
     <UserControl.DataContext>
