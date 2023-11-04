@@ -21,9 +21,11 @@ namespace sieu_thi_mini.View
     public partial class Products : UserControl
     {
         string ConnectionString = App.ConnectionString;
+        string manv;
         public Products()
         {
             InitializeComponent();
+            manv = App.MaDangNhapService.MaDangNhap;
         }
     }
 }

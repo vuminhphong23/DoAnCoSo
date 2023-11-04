@@ -20,9 +20,11 @@ namespace sieu_thi_mini
     public partial class MainWindowEmployee : Window
     {
         string ConnectionString = App.ConnectionString;
-        public MainWindowEmployee()
+        
+        public MainWindowEmployee(string manv)
         {
             InitializeComponent();
+            App.MaDangNhapService.MaDangNhap = manv;
         }
 
         private void btLogOut_Click(object sender, RoutedEventArgs e)
