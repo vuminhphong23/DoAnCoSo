@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="sieu_thi_mini.View.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Menu="clr-namespace:sieu_thi_mini.Utilities"
+             xmlns:vm="clr-namespace:sieu_thi_mini.ViewModel"
+             xmlns:local="clr-namespace:sieu_thi_mini"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:lvc1="clr-namespace:LiveCharts;assembly=LiveCharts"
+             xmlns:fa="http://schemas.fontawesome.io/icons/" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="822" Loaded="UserControl_Loaded"
+             >
+    <Grid>
+        <materialDesign:Card
+            Padding="8"
+            
+            Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Margin="575,63,23,465" RenderTransformOrigin="0.5,0.5">
+            <materialDesign:Card.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC3248D"/>
+                    <GradientStop Color="#FF7825F6" Offset="1"/>
+                    <GradientStop Color="#FF310F64" Offset="1"/>
+                </LinearGradientBrush>
+            </materialDesign:Card.Background>
+            <TextBlock
+                Text="Doanh thu ngày"
+                
+                VerticalAlignment="Top"
+                TextWrapping="Wrap" Margin="45,-9,11,0" FontSize="16" Foreground="White" />
+        </materialDesign:Card>
+        <materialDesign:PackIcon Kind="CurrencyUsd" Margin="581,74,0,0" Height="50" Width="40" Foreground="White"  />
+
+        <Label x:Name="moneyDay" HorizontalAlignment="Left" Margin="648,89,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" />
+        <materialDesign:Card
+            Padding="8"
+            Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Margin="18,62,584,466">
+            <materialDesign:Card.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF11A3E"/>
+                    <GradientStop Color="#FFDE8C43" Offset="1"/>
+                    <GradientStop Color="#FFDE8C43" Offset="1"/>
+                </LinearGradientBrush>
+            </materialDesign:Card.Background>
+            <TextBlock
+                Text="Số hóa đơn trong ngày"
+                TextWrapping="Wrap" Margin="57,-3,12,-9" FontSize="16" Foreground="White" />
+        </materialDesign:Card>
+        <materialDesign:PackIcon Kind="Cart" Margin="36,73,0,0" Height="50" Width="40" Foreground="White"  />
+
+        <Label x:Name="countOrder" HorizontalAlignment="Left" Margin="188,78,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFE8D5D5" />
+        <materialDesign:Card
+            Padding="8"
+            Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Margin="281,63,293,465">
+            <materialDesign:Card.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00E4FF"/>
+                    <GradientStop Color="#FF016CFD" Offset="1"/>
+                    <GradientStop Color="#FF016CFD" Offset="1"/>
+                </LinearGradientBrush>
+            </materialDesign:Card.Background>
+            <TextBlock
+                Text="Số sản phẩm bán trong ngày"
+                TextWrapping="Wrap" Margin="63,-3,34,-3" FontSize="16" Foreground="White" />
+        </materialDesign:Card>
+        <materialDesign:PackIcon Kind="BasketCheck" Margin="300,74,0,0" Height="50" Width="40" Foreground="White"  />
+        <Label x:Name="countProduct" HorizontalAlignment="Left" Margin="484,77,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" />
+        <Border Background="#FFFAFA"  Margin="17,159,323,255">
+            <lvc:CartesianChart Name="columnChart" Series="{Binding ColumnChartSeriesCollection}">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Giờ" Labels="{Binding Labels}"/>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Doanh Thu"/>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </Border>
+        <Border Background="#FFFAFA"   Margin="521,159,23,255">
+            <lvc:PieChart Name="PieChart" Series="{Binding PieChartSeriesCollection}">
+            </lvc:PieChart>
+
+        </Border>
+        <Border Background="#FFFAFA" Margin="17,372,23,22">
+            <lvc:CartesianChart Name="lineChart" Series="{Binding LineChartSeriesCollection}">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Giờ" Labels="{Binding Labels}"/>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Số Hóa Đơn"/>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </Border>
+        
+
+
+    </Grid>
+</UserControl>
