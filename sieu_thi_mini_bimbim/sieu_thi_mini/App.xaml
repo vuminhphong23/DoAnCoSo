@@ -4,7 +4,7 @@
              xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:local="clr-namespace:sieu_thi_mini"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Login.xaml">
     <Application.Resources>
         
             <ResourceDictionary>

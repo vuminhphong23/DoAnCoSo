@@ -21,3 +21,26 @@ E:\C#\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.CoreCo
 E:\C#\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.CopyComplete
 E:\C#\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.exe
 E:\C#\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.pdb
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\GiaoDienDataGrid.exe.config
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\GiaoDienDataGrid.exe
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\GiaoDienDataGrid.pdb
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.AssemblyReference.cache
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.SuggestedBindingRedirects.cache
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\MainWindow.baml
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\App.baml
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\MainWindow.g.cs
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\App.g.cs
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid_MarkupCompile.cache
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.g.resources
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.Properties.Resources.resources
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.GenerateResource.cache
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.CoreCompileInputs.cache
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.csproj.CopyComplete
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.exe
+D:\Đồ án cơ sở\DoAnCoSo_Git\DoAnCoSo\GiaoDienDataGrid\GiaoDienDataGrid\obj\Debug\GiaoDienDataGrid.pdb
