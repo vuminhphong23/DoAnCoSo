@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="sieu_thi_mini.View.Employees"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:sieu_thi_mini.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="570" d:DesignWidth="870"
+             Style="{StaticResource Page_Style}">
+
+    <UserControl.DataContext>
+        <vm:EmployeeVM/>
+    </UserControl.DataContext>
+    <Grid>
+        <Border CornerRadius="0, 20, 20, 0"/>
+        <Label Content="Nhân viên" HorizontalAlignment="Left" Margin="74,36,0,0" VerticalAlignment="Top" Style="{StaticResource MaterialDesignLabel}">
+            
+        </Label>
+
+    </Grid>
+</UserControl>
