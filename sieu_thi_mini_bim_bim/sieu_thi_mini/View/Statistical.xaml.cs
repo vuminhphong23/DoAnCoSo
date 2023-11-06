@@ -76,7 +76,7 @@ namespace sieu_thi_mini.View
             // Initialize the Labels array with month names
             for (int i = 0; i < 12; i++)
             {
-                Labels[i] = (i + 1).ToString(); // Months are 1-indexed
+                Labels[i] = "Ngày " + (i + 1).ToString() ; // Months are 1-indexed
             }
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))

@@ -158,8 +158,8 @@
                     <ContentControl x:Name="Pages"
                                 Content="{Binding CurrentView}" Grid.Row="1"/>
 
-                    <TextBox x:Name="txtMaNV" TextAlignment="Right" BorderThickness="0" Text="NV001" HorizontalAlignment="Right" Margin="0,0,55,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="36" FontSize="11" Height="20"/>
-                    <TextBox x:Name="txtTenNV" TextAlignment="Right" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,55,0" TextWrapping="Wrap" Text="VŨ MINH PHONG" VerticalAlignment="Bottom" Width="90" Height="23" FontSize="11"/>
+                    <TextBox x:Name="txtMaNV" IsReadOnly="true" TextAlignment="Right" BorderThickness="0" Text="NV001" HorizontalAlignment="Right" Margin="0,0,55,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="36" FontSize="11" Height="20"/>
+                    <TextBox x:Name="txtTenNV" IsReadOnly="true" TextAlignment="Right" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,55,0" TextWrapping="Wrap" Text="VŨ MINH PHONG" VerticalAlignment="Bottom" Width="90" Height="23" FontSize="11"/>
                    
                     
                 </Grid>

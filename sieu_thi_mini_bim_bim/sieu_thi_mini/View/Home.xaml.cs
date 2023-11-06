@@ -103,7 +103,7 @@ namespace sieu_thi_mini.View
             ChartValues<int> hoaDonData = new ChartValues<int>();
             for (int i = 1; i <= 24; i++)
             {
-                Labels[i-1] = i.ToString();
+                Labels[i-1] = i.ToString() +"h";
                 hoaDonData.Add(0); // Ban đầu, số hóa đơn của mỗi giờ là 0
             }
 
@@ -156,7 +156,7 @@ namespace sieu_thi_mini.View
             ChartValues<double> doanhThuData = new ChartValues<double>();
             for (int i = 1; i <= 24; i++)
             {
-                Labels[i-1] = i.ToString();
+                Labels[i-1] = i.ToString() +"h";
                 doanhThuData.Add(0); // Ban đầu, doanh thu của mỗi giờ là 0
             }
 

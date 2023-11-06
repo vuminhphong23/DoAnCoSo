@@ -21,9 +21,22 @@ namespace sieu_thi_mini.View
     public partial class Setting : UserControl
     {
         string ConnectionString = App.ConnectionString;
+        string manv = App.MaDangNhapService.MaDangNhap;
         public Setting()
         {
             InitializeComponent();
+        }
+        private void HienThi()
+        {
+            //if(manv == "admin")
+            //{
+            //    //select all database  
+            //}
+            //else
+            //{
+            //    //select * from tblNhanVien where MaNhanVien = mavv;
+                
+            //}
         }
     }
 }

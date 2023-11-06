@@ -79,3 +79,7 @@ E:\C#\sieu_thi_mini\sieu_thi_mini\bin\Debug\itextsharp.xml
 E:\C#\sieu_thi_mini\sieu_thi_mini\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\OrderDetail.g.cs
 E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\OrderDetail.baml
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\AddEmployees.g.cs
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\EditEmployees.g.cs
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\AddEmployees.baml
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\EditEmployees.baml
