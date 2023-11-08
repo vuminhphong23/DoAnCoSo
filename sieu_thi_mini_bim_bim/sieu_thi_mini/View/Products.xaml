@@ -8,18 +8,60 @@
              xmlns:local="clr-namespace:sieu_thi_mini"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"  
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="870"
-             Style="{StaticResource Page_Style}">
+             Style="{StaticResource Page_Style}" Loaded="UserControl_Loaded">
 
     <UserControl.DataContext>
         <vm:ProductVM/>
     </UserControl.DataContext>
     <Grid>
         <Border CornerRadius="0, 20, 20, 0"/>
-        <Label Content="Sản phẩm" HorizontalAlignment="Left" Margin="74,36,0,0" VerticalAlignment="Top" Style="{StaticResource MaterialDesignLabel}">
+        <TextBox x:Name="txtSearch" Text="Search..." Foreground="Black" Height="30" Width="200" Margin="480,23,190,517" GotFocus="txtSearch_GotFocus"/>
+        <Button Content="Search" Style="{StaticResource allButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="35" Margin="684,25,0,0" Click="Search_Click" />
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0,73,0,0">
+            <Grid>
+                <!-- Danh sách món ăn -->
+                <ItemsControl Name="foodItemsControl" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 0 10 10" ItemsSource="{Binding FoodItems}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" Width="420">
+                                <!-- Thiết lập Width của WrapPanel để chia thành 3 cột -->
+                            </WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource allButton}" Width="125" Height="110" Margin="5" Click="FoodItem_Click">
+                                <StackPanel>
+                                    <Image Source="{Binding ImagePath}" Width="65" Height="65" />
+                                    <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" />
+                                    <TextBlock Text="{Binding Price, StringFormat='Giá :{0:N0}đ'}" />
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </ScrollViewer>
+        <!-- Danh sách món đã chọn -->
+        <DataGrid Name="selectedItemsDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="480,75,0,0" Width="355" Height="300" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tên" IsReadOnly="True" CanUserResize="False" Width="100" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Giá" IsReadOnly="True" CanUserResize="False" Width="85" Binding="{Binding Price, StringFormat=' {0:N0}đ'}" />
+                <DataGridTextColumn Header="Số lượng" IsReadOnly="True" CanUserResize="False" Width="86" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Thành tiền" IsReadOnly="True" CanUserResize="False" Width="95" Binding="{Binding totalPrice, StringFormat=' {0:N0}đ'}" />
+            </DataGrid.Columns>
+        </DataGrid>
 
-        </Label>
+        <TextBlock Style="{StaticResource MaterialDesignBody2TextBlock}" x:Name="totalPriceTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="680,394,0,0"/>
 
+        <!-- Nút thêm món đã chọn -->
+        <Button x:Name="btLoad" Style="{StaticResource allButton}" Click="btLoad_Click" Margin="0,24,20,511" Width="50">
+            <Icon:PackIconMaterial Kind="RotateLeft" VerticalAlignment="Center" Width="20" Height="50" Margin="8 1 8 0"/>
+        </Button>
+        <Button x:Name="btSave" Content="Lưu hóa đơn" Style="{StaticResource allButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="30" Margin="680,430,0,0" Click="Save_Click" />
+        <Button x:Name="btCancle"  Content="Hủy hóa đơn" Style="{StaticResource allButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="30" Margin="481,430,0,0" Click="Cancel_Click" />
     </Grid>
 </UserControl>

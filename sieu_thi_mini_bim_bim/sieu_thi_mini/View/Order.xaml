@@ -46,7 +46,7 @@
             <StackPanel Orientation="Horizontal"
                         VerticalAlignment="Top"
                         Grid.Column="4" Height="29">
-                <materialDesign:PackIcon Kind="Magnify" Margin="0 8 0 0" Height="20" Width="20" Foreground="#E285DE"/>
+                <materialDesign:PackIcon Kind="Magnify" Margin="0 8 0 0" Height="20" Width="20" Foreground="#6741d9"/>
 
                 <TextBox x:Name="txtSearch" Text="Tìm kiếm . . . "  
                     FontSize="13"
@@ -55,9 +55,9 @@
                            Background="Transparent"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
-                             Foreground="#E285DE"
-                             CaretBrush="#E285DE"
-                             BorderBrush="#E285DE"
+                             Foreground="#6741d9"
+                             CaretBrush="#6741d9"
+                             BorderBrush="#6741d9"
                              BorderThickness="0,0,0,1"                             
                              VerticalContentAlignment="Center"
                              Margin="5,5,0,0" GotFocus="txtSearch_GotFocus"/>

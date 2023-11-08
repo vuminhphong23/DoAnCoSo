@@ -41,6 +41,7 @@
 
             <Label x:Name="moneyDay" Width="150" Content="1" HorizontalAlignment="Left" Margin="690,35,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" />
             <materialDesign:Card
+            
             Padding="8"
             Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" Height="72"  Margin="15,15,0,0">
                 <materialDesign:Card.Background>
@@ -56,7 +57,7 @@
             </materialDesign:Card>
             <materialDesign:PackIcon Kind="Cart" Margin="32,26,0,0" Height="50" Width="40" Foreground="White"  />
 
-            <Label x:Name="countOrder" Foreground="white" Content="100"  HorizontalAlignment="Right" Margin="0,30,648,0" VerticalAlignment="Top" FontSize="24" />
+            <Label x:Name="countOrder" Foreground="white" Content="100"  HorizontalAlignment="Left" Margin="175,30,0,0" VerticalAlignment="Top" FontSize="24" />
             <materialDesign:Card
             Padding="8"
             Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" Width="220" Height="72" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,15,0,0">
@@ -82,11 +83,11 @@
                             <lvc:Axis Title="Giờ" Labels="{Binding Labels}"/>
                         </lvc:CartesianChart.AxisX>
                         <lvc:CartesianChart.AxisY>
-                            <lvc:Axis Title="Doanh Thu"/>
+                            <lvc:Axis Title="Doanh Thu" LabelFormatter="{Binding YFormatter}"/>
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
                 </Grid>
-                
+
             </Border>
             <Border Grid.Row="0" Background="white" CornerRadius="20" BorderThickness="0.2" BorderBrush="Gray" HorizontalAlignment="Right" Width="320"  Margin="0,106,15,10">
                 <Grid>
@@ -95,7 +96,7 @@
                     <lvc:PieChart Name="PieChart" Margin="0 20 0 0" Series="{Binding PieChartSeriesCollection}">
                     </lvc:PieChart>
                 </Grid>
-                
+
 
             </Border>
             <Border Background="white" CornerRadius="20" BorderThickness="0.2" BorderBrush="Gray" Margin="15,10,349,15" Grid.Row="1">
@@ -111,15 +112,15 @@
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
                 </Grid>
-                
+
             </Border>
 
             <Border Background="White" BorderBrush="gray" BorderThickness="0.2"  HorizontalAlignment="Right"  CornerRadius="20" Margin="0,10,15,15" Grid.Row="1" Width="320" >
-                <ListBox x:Name="lbHoaDon" ItemsSource="{Binding recentInvoices}" Loaded="ListBox_Loaded" 
-                        Background="Transparent"  BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Width="317">
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" x:Name="lbHoaDon" ItemsSource="{Binding recentInvoices}" Loaded="ListBox_Loaded" 
+                        Background="Transparent"  BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
                     <ListBox.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleX="-1"/>
+                            <ScaleTransform ScaleX="1"/>
                             <SkewTransform/>
                             <RotateTransform/>
                             <TranslateTransform/>

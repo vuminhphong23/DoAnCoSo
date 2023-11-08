@@ -129,7 +129,10 @@ FontSize="15"
                 FontSize="15"
                 FontFamily="Montserrat" Margin="20,338,0,0"
                 VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <DatePicker Name="txtNgaySinh" HorizontalAlignment="Left" Margin="150,347,0,0" VerticalAlignment="Top" Width="200"/>
+            <DatePicker Name="txtNgaySinh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" 
+                    Background="#F0F0F0" Foreground="Black" 
+                    BorderBrush="#707070" BorderThickness="1" 
+                    SelectedDateFormat="Short" Margin="150,337,0,0" Height="25"/>
             <Button         x:Name="btSave" Click="btSave_Click"            
                             Content="Lưu"                            
                             FontSize="15"

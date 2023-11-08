@@ -50,7 +50,7 @@ namespace sieu_thi_mini.View
         {
             get
             {
-                return value => value.ToString("N0");
+                return value => value.ToString("N0")+ "đ";
             }
         }
 

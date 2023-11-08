@@ -8,18 +8,104 @@
              xmlns:local="clr-namespace:sieu_thi_mini"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"  
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="870"
-             Style="{StaticResource Page_Style}">
+             Style="{StaticResource Page_Style}" Loaded="UserControl_Loaded">
 
     <UserControl.DataContext>
         <vm:ImportProductVM/>
     </UserControl.DataContext>
-    <Grid>
-        <Border CornerRadius="0, 20, 20, 0"/>
-        <Label Content="Nhập hàng" HorizontalAlignment="Left" Margin="74,36,0,0" VerticalAlignment="Top" Style="{StaticResource MaterialDesignLabel}">
+    <Grid Grid.Column="1" Margin="30 20 20 20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="57"/>
+            <RowDefinition Height="auto" MinHeight="56"/>
+            <!--<RowDefinition Height="auto"/>-->
+            <!--<RowDefinition Height="auto"/>-->
+            <!--<RowDefinition Height="auto"/>-->
+            <!--<RowDefinition Height="auto"/>-->
+        </Grid.RowDefinitions>
 
-        </Label>
+        <Grid Width="300" HorizontalAlignment="Left" Margin="380,0,0,0">
+            <Button x:Name="btAdd" Style="{StaticResource allButton}" Click="btAdd_Click" Margin="-371,16,0,6" Width="150" HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal">
+                    <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 1 8 0"/>
+                    <TextBlock Text="Nhập hàng"/>
+                </StackPanel>
+            </Button>
 
+            <TextBox x:Name="txtSearch" Text="Search..." Foreground="Black" Height="30" GotFocus="txtSearch_GotFocus" />
+            <Button x:Name="btSearch" Style="{StaticResource allButton}" Click="btSearch_Click" Margin="0,15,-70,6" Width="50">
+                <StackPanel Orientation="Horizontal">
+                    <Icon:PackIconMaterial Kind="Magnify" VerticalAlignment="Center" Width="11" Height="11" Margin="0 1 8 0"/>
+                    <TextBlock Text="Tìm"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btLoad" Style="{StaticResource allButton}" Click="btLoad_Click" Margin="0,15,-130,6" Width="50">
+                <StackPanel Orientation="Horizontal">
+                    <Icon:PackIconMaterial Kind="RotateLeft" VerticalAlignment="Center" Width="20" Height="50" Margin="8 1 8 0"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+        <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="1" x:Name="dgproduct" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Height="215" Margin="0,0,0,230">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã sản phẩm" IsReadOnly="True" Width="120" Binding="{Binding ProductCode}"/>
+                <DataGridTextColumn Header="Tên sản phẩm" IsReadOnly="True" Width="120" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Số lượng nhập" IsReadOnly="True" Width="120" Binding="{Binding ImportValue}"/>
+                <DataGridTextColumn Header="Giá nhập" IsReadOnly="True" Width="120" Binding="{Binding ProductImportPrice, StringFormat=' {0:N0}đ'}"/>
+                <DataGridTextColumn Header="Ngày nhập" IsReadOnly="True" Width="120" Binding="{Binding DayImport.Date, StringFormat=dd/MM/yyyy}"/>
+                <DataGridTextColumn Header="Hạn sử dụng" IsReadOnly="True" Width="120" Binding="{Binding Expiry.Date, StringFormat=dd/MM/yyyy}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dgProduct" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Height="215" Margin="0,230,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã sản phẩm" IsReadOnly="True" Width="150" Binding="{Binding ProductCode}"/>
+                <DataGridTextColumn Header="Tên sản phẩm" IsReadOnly="True" Width="150" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Số lượng tồn" IsReadOnly="True" Width="120" Binding="{Binding ProductValue}"/>
+                <DataGridTextColumn Header="Phân loại" IsReadOnly="True" Width="150" Binding="{Binding Classify}"/>
+                <DataGridTextColumn Header="Giá bán" IsReadOnly="True" Width="150" Binding="{Binding ProductPrice, StringFormat=' {0:N0}đ'}"/>
+                <DataGridTemplateColumn IsReadOnly="True" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btPlus" Style="{StaticResource gridEditButton}" Click="btPlus_Click">
+                                    <Icon:PackIconMaterial Kind="Plus" Style="{StaticResource gridButtonIcon}" />
+                                </Button>
+                                <Button x:Name="btDelete" Style="{StaticResource gridRemoveButton}" Margin="5 0 0 0" Click="btDelete_Click" >
+                                    <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource gridButtonIcon}" />
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <!--Pagination section-->
+        <!--<Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1"
+            CornerRadius="5" Padding="5" Background="White" Margin="0 10 10 10">
+            <StackPanel Orientation="Horizontal">
+
+                <Button Style="{StaticResource pagingButton}">
+                    <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource pagingButtonIcon}"/>
+                </Button>
+
+                <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
+
+                <Button Style="{StaticResource pagingButton}" Content="1"/>
+                <Button Style="{StaticResource pagingButton}" Content="2" Background="#7950f2" Foreground="#ffffff"/>
+                <Button Style="{StaticResource pagingButton}" Content="3"/>
+
+                <TextBlock Text="..." Foreground="#6c7682" VerticalAlignment="Center" FontSize="15" Margin="10 0"/>
+
+                <Button Style="{StaticResource pagingButton}" Content="7"/>
+                <Button Style="{StaticResource pagingButton}" Content="8"/>
+                <Button Style="{StaticResource pagingButton}" Content="9"/>
+
+                <Button Style="{StaticResource pagingButton}">
+                    <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource pagingButtonIcon}"/>
+                </Button>
+
+            </StackPanel>
+        </Border>-->
     </Grid>
 </UserControl>

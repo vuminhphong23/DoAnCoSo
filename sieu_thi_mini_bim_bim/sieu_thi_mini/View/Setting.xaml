@@ -7,6 +7,7 @@
              xmlns:vm="clr-namespace:sieu_thi_mini.ViewModel"
              xmlns:local="clr-namespace:sieu_thi_mini"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              mc:Ignorable="d" 
              d:DesignHeight="570" d:DesignWidth="870"
@@ -16,10 +17,123 @@
         <vm:SettingVM/>
     </UserControl.DataContext>
     <Grid>
-        <Border CornerRadius="0, 20, 20, 0"/>
-        <Label Content="Cài đặt" HorizontalAlignment="Left" Margin="74,36,0,0" VerticalAlignment="Top" Style="{StaticResource MaterialDesignLabel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-        </Label>
+        <Grid Grid.Row="0" Background="Transparent" >
+            <TextBlock Text="Thông tin cá nhân" Margin="20 0 0 0" Foreground="Black" FontSize="25" VerticalAlignment="Center"></TextBlock>
+        </Grid>
 
+        <Grid Grid.Row="1" Background="Transparent">
+            <Label Content="Họ tên:" HorizontalAlignment="Left" Margin="45,62,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+            <TextBox x:Name="txtHoTen"
+                             FontSize="13"           
+                             Background="Transparent"
+                             FontWeight="Normal"
+                             FontFamily="Montserrat"
+                             CaretBrush="#E285DE"
+                             BorderBrush="#E285DE"
+                             BorderThickness="0,0,0,1"
+                             HorizontalAlignment="Left" Margin="134,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="26" />
+            <DatePicker Name="txtNgaySinh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="266" 
+                    Background="#F0F0F0" Foreground="Black" 
+                    BorderBrush="#707070" BorderThickness="1" 
+                    SelectedDateFormat="Short" Margin="134,228,0,0" Height="25"/>
+
+            <Button Style="{StaticResource allButton}" Margin="0,291,32,24"
+                        Width="194"
+                        Background="#623ed0"
+                        Click="btn_save_info"
+                        Command="{Binding LoginCommand}" >
+                <StackPanel Orientation="Horizontal">
+                    <Icon:PackIconMaterial Kind="ContentSave" VerticalAlignment="Center" Width="11" Height="11" Margin="0 1 8 0"/>
+                    <TextBlock Text="Lưu"/>
+                </StackPanel>
+            </Button>
+            <Label Content="Giới tính:&#xD;&#xA;" HorizontalAlignment="Left" Margin="45,142,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+            <Label Content="Ngày sinh:" HorizontalAlignment="Left" Margin="45,228,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+            <Label Content="Số điện thoại:" HorizontalAlignment="Left" Margin="477,62,0,0" VerticalAlignment="Top" Width="100" Height="26" RenderTransformOrigin="-0.03,-0.273"/>
+            <Label Content="Địa chỉ:" HorizontalAlignment="Left" Margin="477,142,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+            <Label Content="Email:" HorizontalAlignment="Left" Margin="477,227,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+            <TextBox x:Name="txtGioiTinh"
+                FontSize="13"                      
+                Background="Transparent"
+                FontWeight="Normal"
+                FontFamily="Montserrat"
+                CaretBrush="#E285DE"
+                BorderBrush="#E285DE"
+                BorderThickness="0,0,0,1"
+                HorizontalAlignment="Left" Margin="134,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="26" />
+            <TextBox x:Name="txtSoDienThoai"
+                FontSize="13"                      
+                Background="Transparent"
+                FontWeight="Normal"
+                FontFamily="Montserrat"
+                CaretBrush="#E285DE"
+                BorderBrush="#E285DE"
+                BorderThickness="0,0,0,1"
+                HorizontalAlignment="Left" Margin="577,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Height="26" />
+            <TextBox x:Name="txtDiaChi"
+                FontSize="13"                      
+                Background="Transparent"
+                FontWeight="Normal"
+                FontFamily="Montserrat"
+                CaretBrush="#E285DE"
+                BorderBrush="#E285DE"
+                BorderThickness="0,0,0,1"
+                HorizontalAlignment="Left" Margin="577,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Height="26" />
+            <TextBox x:Name="txtEmail"
+                FontSize="13"                      
+                Background="Transparent"
+                FontWeight="Normal"
+                FontFamily="Montserrat"
+                CaretBrush="#E285DE"
+                BorderBrush="#E285DE"
+                BorderThickness="0,0,0,1"
+                HorizontalAlignment="Left" Margin="577,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Height="26" />
+        </Grid>
+
+        <Grid Grid.Row="2" Background="Transparent">
+            <TextBlock Text="Thông tin tài khoản" Margin="20 0 0 0" Foreground="Black" FontSize="25" VerticalAlignment="Center"></TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="3" Background="Transparent">
+            <Label Content="Tên đăng nhập:" HorizontalAlignment="Left" Margin="41,30,0,0" VerticalAlignment="Top" Width="100" Height="26" RenderTransformOrigin="0.51,-0.488"/>
+            <TextBox 
+                 FontSize="13" 
+                 x:Name="txtTenDangNhap"
+                             Background="Transparent"
+                             FontWeight="Normal"
+                             FontFamily="Montserrat"
+                             CaretBrush="#E285DE"
+                             BorderBrush="#E285DE"
+                             BorderThickness="0,0,0,1"
+                 HorizontalAlignment="Left" Margin="146,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="26" />
+            <Label Content="Mật khẩu:" HorizontalAlignment="Left" Margin="41,84,0,0" VerticalAlignment="Top" Width="100" Height="26" RenderTransformOrigin="0.51,-0.488"/>
+            <TextBox 
+                FontSize="13"  
+                x:Name="txtMatKhau"
+                Background="Transparent"
+                FontWeight="Normal"
+                FontFamily="Montserrat"
+                CaretBrush="#E285DE"
+                BorderBrush="#E285DE"
+                BorderThickness="0,0,0,1"
+                HorizontalAlignment="Left" Margin="146,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="26" />
+            <Button Style="{StaticResource allButton}" 
+                Width="194"
+                Background="#623ed0"
+                    Click="btn_changePw"
+                Command="{Binding LoginCommand}" Margin="0,61,32,24" >
+                <StackPanel Orientation="Horizontal">
+                    <Icon:PackIconMaterial Kind="ContentSave" VerticalAlignment="Center" Width="11" Height="11" Margin="0 1 8 0"/>
+                    <TextBlock Text="Xác nhận "/>
+                </StackPanel>
+            </Button>
+        </Grid>
     </Grid>
 </UserControl>

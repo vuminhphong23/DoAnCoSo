@@ -64,7 +64,7 @@
                   Width="300"
                   VerticalAlignment="Top"
                   materialDesign:HintAssist.Hint="Tên đăng nhập"
-                  Style="{StaticResource MaterialDesignOutlinedTextBox}">
+Style="{StaticResource MaterialDesignOutlinedTextBox}">
                     <TextBox.Text>
                         <Binding
                               Path="Text2"
@@ -92,7 +92,7 @@
                       IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                       Style="{StaticResource MaterialDesignRaisedButton}"
                       ToolTip="Resource name: MaterialDesignRaisedButton" />
-                <TextBlock Text="Quên mật khẩu" Margin="90 10 0 0" FontSize="14" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="lblForgetPassword" PreviewMouseDown="lblForgetPassword_PreviewMouseDown" Text="Quên mật khẩu" Margin="90 10 0 0" FontSize="14" FontWeight="Bold"></TextBlock>
             </StackPanel>
         </Border>
     </Grid>

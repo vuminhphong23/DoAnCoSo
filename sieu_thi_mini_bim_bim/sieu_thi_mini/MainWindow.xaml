@@ -111,13 +111,13 @@
                                         <TextBlock Text="Thống kê"/>
                                     </StackPanel>
                                 </Button>
-                                <Button Style="{StaticResource menuButton}"
+                                <!--<Button Style="{StaticResource menuButton}"
                                     Command="{Binding SettingCommand}">
                                     <StackPanel Orientation="Horizontal">
                                         <Icon:PackIconMaterial Kind="CogOutline" Style="{StaticResource menuButtonIcon}"/>
                                         <TextBlock Text="Cài đặt"/>
                                     </StackPanel>
-                                </Button>
+                                </Button>-->
 
                             </StackPanel>
                             <Button x:Name="btlogout" Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20" Click="btLogOut_Click">

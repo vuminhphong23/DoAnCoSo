@@ -1,0 +1,44 @@
+﻿<Window x:Class="sieu_thi_mini.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sieu_thi_mini.View"
+        mc:Ignorable="d"
+            Height="600" Width="822"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None" AllowsTransparency="True" Background="Transparent" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Background="#f6f6f8" CornerRadius="20"/>
+        <Label Content="Mã sản phẩm" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,20,682,545"/>
+        <Label Content="Tên sản phẩm" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,80,682,485"/>
+        <Label Content="Phân loại" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,140,682,425"/>
+        <Label Content="Đơn vị" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,200,682,365"/>
+        <Label Content="Số lượng" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,260,682,305"/>
+        <Label Content="Giá nhập" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,320,682,245"/>
+        <Label Content="Giá bán" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,380,682,185"/>
+        <Label Content="Ngày nhập" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,440,682,125"/>
+        <Label Content="Hạn sử dụng" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="33,500,682,65"/>
+        <TextBox x:Name="txtMaSanPham" TextWrapping="Wrap"  Margin="160,20,430,545"/>
+        <TextBox x:Name="txtTenSanPham" TextWrapping="Wrap"  Margin="160,80,430,485"/>
+        <TextBox x:Name="txtPhanLoai" TextWrapping="Wrap"  Margin="160,140,430,425"/>
+        <TextBox x:Name="txtDonVi" TextWrapping="Wrap"  Margin="160,200,430,365"/>
+        <TextBox x:Name="txtSoLuong" TextWrapping="Wrap"  Margin="160,260,430,305"/>
+        <TextBox x:Name="txtGiaNhap" TextWrapping="Wrap"  Margin="160,320,430,245"/>
+        <TextBox x:Name="txtGiaBan" TextWrapping="Wrap" Margin="160,380,430,185"/>
+        <DatePicker x:Name="dpNgayNhap" IsEnabled="False" Margin="160,440,430,125" />
+        <DatePicker x:Name="dpHSD"   Margin="160,500,430,65" />
+
+
+        <Border Margin="544,60,84,344" Background="White">
+            <Image x:Name="img"/>
+        </Border>
+        <Button x:Name="upImg" Style="{StaticResource allButton}" Width="100" Content="Tải ảnh lên" Margin="0,284,84,274" Click="upImg_Click"></Button>
+        <Button x:Name="btCancel" Style="{StaticResource allButton}" Width="100" Content="Hủy" Margin="0,520,260,24" Click="btCancel_Click"></Button>
+        <Button x:Name="btSave" Style="{StaticResource allButton}" Width="100" Content="Lưu" Margin="0,530,140,34" Click="btSave_Click"/>
+        <Button x:Name="btExit" Style="{StaticResource allButton}" Width="100" Content="Thoát" Margin="0,529,20,35" Click="btExit_Click"/>
+    </Grid>
+</Window>

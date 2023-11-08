@@ -26,6 +26,7 @@ namespace sieu_thi_mini
         {
             InitializeComponent();
             this.manv = manv;
+            App.MaDangNhapService.MaDangNhap = manv;
         }
         private void CloseApp_Click(object sender, RoutedEventArgs e)
         {

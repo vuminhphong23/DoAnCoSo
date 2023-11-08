@@ -1,0 +1,36 @@
+﻿<Window x:Class="sieu_thi_mini.ImportMore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sieu_thi_mini.View"
+        mc:Ignorable="d"
+        Height="341" Width="800" WindowStartupLocation="CenterScreen"
+ WindowStyle="None" AllowsTransparency="True" Background="Transparent" Loaded="Window_Loaded">
+    <Border Background="#f6f6f8" CornerRadius="20">
+        <Grid Margin="0,0,0,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Mã sản phẩm" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="30,30,661,275"/>
+            <Label Content="Tên sản phẩm" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="30,100,659,203"/>
+            <Label Content="Số lượng nhập" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="30,170,657,135"/>
+            <Label Content="Giá nhập" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="30,240,682,65"/>
+            <Label Content="Giá bán" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="415,30,299,275"/>
+            <Label Content="Ngày nhập" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="415,100,300,205"/>
+            <Label Content="Hạn sử dụng" Foreground="Black" FontSize="15" FontWeight="Bold" Margin="415,170,284,135"/>
+            <TextBox x:Name="txtMaSanPham" TextWrapping="Wrap" IsReadOnly="True" Margin="164,25,420,275"/>
+            <TextBox x:Name="txtTenSanPham" TextWrapping="Wrap" IsReadOnly="True" Margin="164,95,420,205"/>
+            <TextBox x:Name="txtSoLuong" TextWrapping="Wrap"  Margin="164,165,420,135"/>
+            <TextBox x:Name="txtGiaNhap" TextWrapping="Wrap"  Margin="164,235,420,65"/>
+            <TextBox x:Name="txtGiaBan" TextWrapping="Wrap" Margin="546,25,44,275"/>
+            <DatePicker x:Name="dpNgayNhap" Height="40" IsEnabled="False" Margin="546,95,44,0" VerticalAlignment="Top" />
+            <DatePicker x:Name="dpHSD" Height="42"   Margin="546,165,44,0" VerticalAlignment="Top" />
+
+            <Button x:Name="btCancel" Width="100" Height="NaN" Style="{StaticResource allButton}" Content="Hủy" Margin="0,275,255,30" Click="btCancel_Click"></Button>
+            <Button x:Name="btSave" Width="100" Height="NaN"  Style="{StaticResource allButton}" Content="Lưu" Margin="0,275,137,30" Click="btSave_Click"/>
+            <Button x:Name="btExit" Width="100" Height="NaN"  Style="{StaticResource allButton}" Content="Thoát" Margin="0,275,25,30" Click="btExit_Click"/>
+        </Grid>
+    </Border>
+</Window>

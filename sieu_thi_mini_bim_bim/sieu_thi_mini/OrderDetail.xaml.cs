@@ -95,17 +95,23 @@ namespace sieu_thi_mini
                 paragraph.Alignment = Element.ALIGN_CENTER;
                 doc.Add(paragraph);
 
-                var ngayText = "Ngày bán: " + txtNgayBan.Text.ToString();
-                var paragraph1 = new Paragraph(ngayText, new Font(unicodeBaseFont, 12));
+                
+
+                var manvText = "Mã nhân viên: " + txtMaNhanVien.Text.ToString();
+                var paragraph1 = new Paragraph(manvText, new Font(unicodeBaseFont, 12));
                 paragraph1.Alignment = Element.ALIGN_CENTER;
                 doc.Add(paragraph1);
 
-                var manvText = "Mã nhân viên: " + txtMaNhanVien.Text.ToString();
-                var paragraph2 = new Paragraph(manvText, new Font(unicodeBaseFont, 12));
+                var ngayText = "Ngày bán: " + txtNgayBan.Text.ToString();
+                var paragraph2 = new Paragraph(ngayText, new Font(unicodeBaseFont, 12));
                 paragraph2.Alignment = Element.ALIGN_CENTER;
                 doc.Add(paragraph2);
 
-                
+                var gioText = "Giờ bán: " + txtGioBan.Text.ToString();
+                var paragraph3 = new Paragraph(gioText, new Font(unicodeBaseFont, 12));
+                paragraph3.Alignment = Element.ALIGN_CENTER;
+                doc.Add(paragraph3);
+
 
                 doc.Add(Chunk.NEWLINE);
 

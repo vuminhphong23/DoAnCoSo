@@ -33,7 +33,7 @@ namespace sieu_thi_mini
             txtDiaChi.Text = DiaChi;
             txtEmail.Text = Email;
             txtTenDangNhap.Text = TenDangNhap;
-            txtMatKhau.Text = MatKhau;
+           
             txtNgaySinh.Text = NgaySinh.ToString("dd/MM/yyyy");
         }
 
@@ -111,20 +111,26 @@ namespace sieu_thi_mini
                     }
 
                     string sqlStr =
-                        "UPDATE tblNhanVien SET " +
-                        "HoTen = N'" + txtTenNhanVien.Text + "'," +
-                        "GioiTinh = N'" + txtGioiTinh.Text + "'," +
-                        "NgaySinh = N'" + toDate(txtNgaySinh.Text) + "'," +
+                                    "UPDATE tblNhanVien SET " +
+                                    "HoTen = N'" + txtTenNhanVien.Text + "'," +
+                                    "GioiTinh = N'" + txtGioiTinh.Text + "'," +
+                                    "NgaySinh = N'" + toDate(txtNgaySinh.Text) + "'," +
+                                    "Sdt = N'" + txtSoDienThoai.Text + "'," +
+                                    "DiaChi = N'" + txtDiaChi.Text + "'," +
+                                    "Email = N'" + txtEmail.Text + "'," +
+                                    "TenDangNhap = N'" + txtTenDangNhap.Text + "'";
 
-                        "Sdt = N'" + txtSoDienThoai.Text + "'," +
-                        "DiaChi = N'" + txtDiaChi.Text + "'," +
-                        "Email = N'" + txtEmail.Text + "'," +
-                        "TenDangNhap = N'" + txtTenDangNhap.Text + "'," +
-                        "MatKhau = N'" + EncodeMD5(txtMatKhau.Text) + "' WHERE MaNhanVien = N'" + EmployeesCode + "'";
+                    if (!string.IsNullOrEmpty(txtMatKhau.Text))
+                    {
+                        sqlStr += ", MatKhau = N'" + EncodeMD5(txtMatKhau.Text) + "'";
+                    }
+
+                    sqlStr += " WHERE MaNhanVien = N'" + EmployeesCode + "'";
 
                     SqlCommand cmd = new SqlCommand(sqlStr, Conn);
                     cmd.ExecuteNonQuery();
                     this.Close();
+
                 }
                 catch (Exception ex)
                 {

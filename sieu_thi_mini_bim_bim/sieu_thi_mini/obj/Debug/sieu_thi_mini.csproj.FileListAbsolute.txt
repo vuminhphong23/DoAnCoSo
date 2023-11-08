@@ -83,3 +83,9 @@ E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\AddEmployees.g.cs
 E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\EditEmployees.g.cs
 E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\AddEmployees.baml
 E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\EditEmployees.baml
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\AddProduct.g.cs
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\AddProduct.baml
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\ImportMore.g.cs
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\ImportMore.baml
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\ForgetPassword.g.cs
+E:\C#\sieu_thi_mini\sieu_thi_mini\obj\Debug\ForgetPassword.baml

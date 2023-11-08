@@ -29,6 +29,13 @@ namespace sieu_thi_mini.View
         }
 
         SqlConnection Conn = new SqlConnection();
+        public Func<double, string> YFormatter
+        {
+            get
+            {
+                return value => value.ToString("N0") + " đ";
+            }
+        }
         public class Invoice
         {
             public string InvoiceNumber { get; set; }
@@ -296,7 +303,7 @@ namespace sieu_thi_mini.View
             {
                 connection.Open();
 
-                string query = "SELECT TOP 8 MaHoaDon,MaNhanVien,NgayBan,TongTien FROM tblHoaDon WHERE DAY(NgayBan) = DAY(GETDATE()) AND MONTH(NgayBan) = MONTH(GETDATE()) AND YEAR(NgayBan) = YEAR(GETDATE()) ORDER BY NgayBan DESC";
+                string query = "SELECT TOP 10 MaHoaDon,MaNhanVien,NgayBan,TongTien FROM tblHoaDon WHERE DAY(NgayBan) = DAY(GETDATE()) AND MONTH(NgayBan) = MONTH(GETDATE()) AND YEAR(NgayBan) = YEAR(GETDATE()) ORDER BY MaHoaDon DESC";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
