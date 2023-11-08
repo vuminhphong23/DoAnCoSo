@@ -54,7 +54,7 @@ namespace sieu_thi_mini.View
             dgNhanVien.ItemsSource = null;
             NhanViens.Clear();
             if (Conn.State != ConnectionState.Open) return;
-            SqlCommand command = new SqlCommand("SELECT * FROM tblNhanVien", Conn);
+            SqlCommand command = new SqlCommand("SELECT * FROM tblNhanVien WHERE DaXoa = 0", Conn);
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -114,7 +114,7 @@ namespace sieu_thi_mini.View
 
                 // Sử dụng tham số trong truy vấn SQL để tránh tấn công SQL Injection
                 string query = "SELECT * FROM tblNhanVien WHERE (LOWER(HoTen) LIKE @search OR MaNhanVien LIKE @search) " +
-                    "OR (Sdt LIKE @search OR GioiTinh LIKE @search OR DiaChi LIKE @search OR Email LIKE @search )";
+                    "OR (Sdt LIKE @search OR GioiTinh LIKE @search OR DiaChi LIKE @search OR Email LIKE @search ) AND DaXoa = 0";
                 SqlCommand command = new SqlCommand(query, Conn);
                 command.Parameters.AddWithValue("@search", "%" + txtSearch.Text + "%");
 
@@ -168,7 +168,8 @@ namespace sieu_thi_mini.View
                 // Thực hiện xóa dữ liệu trong cơ sở dữ liệu
                 if (Conn.State == ConnectionState.Open)
                 {
-                    string deleteQuery = "DELETE FROM tblNhanVien WHERE MaNhanVien = @MaNhanVien";
+                    
+                    string deleteQuery = "UPDATE tblNhanVien SET DaXoa =1 WHERE MaNhanVien = @MaNhanVien";
                     SqlCommand deleteCommand = new SqlCommand(deleteQuery, Conn);
                     deleteCommand.Parameters.AddWithValue("@MaNhanVien", selectedNhanVien.manv);
 

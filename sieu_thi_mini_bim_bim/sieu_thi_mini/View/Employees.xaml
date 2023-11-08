@@ -164,7 +164,7 @@ Command="{Binding LoginCommand}" >
                 </DataGrid.Resources>
 
                 <DataGrid.Columns>
-                    <DataGridTemplateColumn CanUserResize="False" Width="Auto">
+                    <DataGridTemplateColumn CanUserResize="False" Width="auto">
                         <DataGridTemplateColumn.HeaderTemplate>
                             <DataTemplate>
                                 <CheckBox Style="{StaticResource CheckBoxStyle1}" x:Name="chkSelectAll" IsChecked="{Binding IsAllSelected}" Checked="chkSelectAll_Checked" Unchecked="chkSelectAll_Unchecked"/>

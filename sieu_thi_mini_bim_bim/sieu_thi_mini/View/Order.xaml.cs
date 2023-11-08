@@ -262,12 +262,25 @@ namespace sieu_thi_mini.View
 
         private void ButtonXoa_Click(object sender, RoutedEventArgs e)
         {
-            OrderItem dataRowView = (OrderItem)((Button)e.Source).DataContext;
-            string sqlStr = "DELETE FROM tblChiTietHoaDon WHERE MaHoaDon =  N'" + dataRowView.OrderCode + "'" +
-                "DELETE FROM tblHoaDon WHERE MaHoaDon = N'" + dataRowView.OrderCode + "'";
-            SqlCommand cmd = new SqlCommand(sqlStr, Conn);
-            cmd.ExecuteNonQuery();
-            NapDuLieuHoaDon();
+            MessageBoxResult result = MessageBox.Show("Bạn có chắc muốn xóa đơn hàng này này?", "Xác nhận xóa", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                OrderItem dataRowView = (OrderItem)((Button)e.Source).DataContext;
+
+                string sqlStr = "DELETE FROM tblChiTietHoaDon WHERE MaHoaDon =  N'" + dataRowView.OrderCode + "'" +
+                    "DELETE FROM tblHoaDon WHERE MaHoaDon = N'" + dataRowView.OrderCode + "'";
+                SqlCommand cmd = new SqlCommand(sqlStr, Conn);
+                cmd.ExecuteNonQuery();
+                NapDuLieuHoaDon();
+
+            }
+            else
+            {
+                return;
+            }
+            
+            
         }
 
         private void btload_Click(object sender, RoutedEventArgs e)

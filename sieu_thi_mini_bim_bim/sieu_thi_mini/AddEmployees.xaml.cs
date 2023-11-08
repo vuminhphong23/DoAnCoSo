@@ -94,13 +94,23 @@ namespace sieu_thi_mini
                 }
             }
         }
+        public static int stt = 1;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
-
+                
                 Conn.ConnectionString = ConnectionString;
                 Conn.Open();
+                string sql = "SELECT TOP 1 MaNhanVien FROM tblNhanVien ORDER BY MaNhanVien DESC";
+                SqlCommand cmd2 = new SqlCommand(sql, Conn);
+                string lastMaNhanVien = (string)cmd2.ExecuteScalar();
+                if (lastMaNhanVien != null)
+                {
+                    int lastStt = int.Parse(lastMaNhanVien.Substring(2));
+                    stt = lastStt + 1;
+                }
+                txtMaNhanVien.Text = "NV" + stt.ToString("D3");
             }
             catch (Exception ex)
             {

@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen"
         Background="#3aa9ad"
         MouseDown="Window_MouseDown" Loaded="Window_Loaded"
-        Title="AddEmployees" Height="400" Width="770">
+        Title="AddEmployees" Height="450" Width="770">
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="TextBox">
             <Setter Property="Background" Value="White"/>
@@ -127,12 +127,14 @@ FontSize="15"
             <TextBlock Text="Ngày Sinh"
                 Foreground="White"
                 FontSize="15"
-                FontFamily="Montserrat" Margin="20,338,0,0"
+                FontFamily="Montserrat" Margin="20,345,0,0"
                 VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <DatePicker Name="txtNgaySinh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" 
-                    Background="#F0F0F0" Foreground="Black" 
+            <Border Height="40" CornerRadius="5" VerticalAlignment="Top" Margin="150,334,0,0" Background="white" Width="200" HorizontalAlignment="Left" BorderBrush="blue" BorderThickness="2" >
+                <DatePicker Height="40"  Name="txtNgaySinh"  HorizontalAlignment="Center" Width="180" 
+                    Background="Transparent" Foreground="Black" 
                     BorderBrush="#707070" BorderThickness="1" 
-                    SelectedDateFormat="Short" Margin="150,337,0,0" Height="25"/>
+                    SelectedDateFormat="Short" VerticalAlignment="Top" />
+            </Border>
             <Button         x:Name="btSave" Click="btSave_Click"            
                             Content="Lưu"                            
                             FontSize="15"

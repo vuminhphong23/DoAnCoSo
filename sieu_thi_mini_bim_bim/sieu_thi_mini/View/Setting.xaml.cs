@@ -138,6 +138,7 @@ namespace sieu_thi_mini.View
                 {
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
+                    App.MatKhauService.MatKhau = txtMatKhau.Text.ToString();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Đổi mật khẩu thành công!");
